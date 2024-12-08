@@ -3,66 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Polme Elo - Cutting-edge Web Development, Blockchain Solutions, and AI Innovations.">
-  <title>Polme Elo - Innovating the Digital Landscape</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>Level Tracker</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Header -->
   <header>
+    <h1>Molp's Progress Tracker</h1>
     <nav>
-      <a href="index.html" class="logo">Polme Elo</a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button class="theme-toggle">🌙</button>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#goals">Goals</a>
+      <a href="#planner">Planner</a>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Welcome to Polme Elo</h1>
-    <p>Innovating the digital landscape with cutting-edge technology.</p>
-    <a href="#services" class="btn">Explore Services</a>
-  </section>
+  <main>
+    <!-- Dashboard Section -->
+    <section id="dashboard">
+      <h2>Dashboard</h2>
+      <div class="stats">
+        <div class="stat">
+          <h3>Current Level</h3>
+          <p id="current-level">1</p>
+        </div>
+        <div class="stat">
+          <h3>Experience Points</h3>
+          <p id="current-xp">0 / 100</p>
+        </div>
+        <div class="stat">
+          <h3>Title</h3>
+          <p id="current-title">Novice Scholar</p>
+        </div>
+      </div>
+    </section>
 
-  <!-- Main Content -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Polme Elo specializes in web development, blockchain solutions, and AI innovations. We transform ideas into reality.</p>
-  </section>
+    <!-- Goals Section -->
+    <section id="goals">
+      <h2>Active Goals</h2>
+      <ul id="goal-list">
+        <li>Learn basic SQL commands <button onclick="completeGoal(this)">Complete</button></li>
+        <li>Run 5km in under 30 minutes <button onclick="completeGoal(this)">Complete</button></li>
+      </ul>
+      <form id="goal-form">
+        <input type="text" id="new-goal" placeholder="Add a new goal" required>
+        <button type="submit">Add Goal</button>
+      </form>
+    </section>
 
-  <section id="services">
-    <h2>Our Services</h2>
-    <ul>
-      <li>Web Development</li>
-      <li>Blockchain Solutions</li>
-      <li>Artificial Intelligence</li>
-    </ul>
-  </section>
+    <!-- Planner Section -->
+    <section id="planner">
+      <h2>Future Plans</h2>
+      <textarea id="planner-input" placeholder="Write your plans here..."></textarea>
+      <button id="save-plans">Save Plans</button>
+      <div id="saved-plans"></div>
+    </section>
+  </main>
 
-  <section id="portfolio">
-    <h2>Portfolio</h2>
-    <p>Coming Soon...</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <form id="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
   <footer>
-    <p>&copy; 2024 Polme Elo. All rights reserved.</p>
+    <p>Molp's Progress Tracker © 2024</p>
   </footer>
 
   <script src="script.js"></script>
